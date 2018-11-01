@@ -20,7 +20,7 @@ for arg in sys.argv[3:]:
     else:
         raise Exception(f'wrong argument: {arg}')
 
-circle_list = [(t, Fraction(n, d)) for t, n, d in arg_circle_list]
+circle_list = [(t, Fraction(Fraction(n), Fraction(d))) for t, n, d in arg_circle_list]
 print(f'radius: {arg_radius} circles: {circle_list}')
 
 
